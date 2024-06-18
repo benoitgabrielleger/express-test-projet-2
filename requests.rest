@@ -1,0 +1,31 @@
+### POST LOGIN Kyle
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "Kyle"
+}
+
+### GET POSTS for Kyle
+
+GET http://localhost:4000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxODcyOTMzMSwiZXhwIjoxNzE4NzI5MzYxfQ.BIFXhORzIVlQFzvdJxPm5j9_29257g-NYPST8vubM9E
+
+### POST TOKEN for Kyle (send refresh token to get new access token)
+
+POST http://localhost:3000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxODcyOTI4NH0.LYUVu1TfFryL5jYwGSTjHzAKNkD0Fxs_uLWI85XumhI"
+}
+
+### LOGOUT for Kyle (send refresh token to delete it)
+
+DELETE http://localhost:3000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTcxODcyOTI4NH0.LYUVu1TfFryL5jYwGSTjHzAKNkD0Fxs_uLWI85XumhI"
+}
