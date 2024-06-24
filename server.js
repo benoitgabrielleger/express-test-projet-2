@@ -19,10 +19,11 @@
 // Install "Rest Client" extension in Vscode.
 // You can use file with extension ".rest" or ".http" to send requests.
 
-require('dotenv').config()
-const express = require('express')
-const jwt = require('jsonwebtoken')
+import express from 'express'
+import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
 
+dotenv.config()
 
 // EXPRESS
 const app = express()
